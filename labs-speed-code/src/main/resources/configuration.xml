@@ -2,7 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//Huiyao Jiang//DTD Configuration 0.1//EN" "http://127.0.0.1/dtd/configuration_0_1.dtd">
 <configuration>
 	<settings>
-		<setting name="globalPackageName" value="info.jianghuiyao.demo"></setting>
+		<setting name="globalPackageName" value="info.xpanda.demo"></setting>
 	</settings>
 
 	<dataSource driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/edu?serverTimezone=UTC"

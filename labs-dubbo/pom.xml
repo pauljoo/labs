@@ -7,5 +7,16 @@
     <groupId>info.xpanda</groupId>
     <artifactId>labs-dubbo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ec-common-parent</module>
+        <module>ec-service-user</module>
+        <module>ec-service-user-api</module>
+        <module>ec-service-order-api</module>
+        <module>ec-service-order</module>
+        <module>ec-service-goods</module>
+        <module>ec-service-goods-api</module>
+        <module>ec-web-portal</module>
+        <module>ec-common-core</module>
+    </modules>
 </project>

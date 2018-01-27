@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.6.RELEASE</version>
+    </parent>
+
+    <groupId>info.xpanda</groupId>
+    <artifactId>ec-common-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <ec-service-user-api.version>1.0.0</ec-service-user-api.version>
+        <ec-service-user.version>1.0.0</ec-service-user.version>
+        <ec-service-goods-api.version>1.0.0</ec-service-goods-api.version>
+        <ec-service-goods.version>1.0.0</ec-service-goods.version>
+        <ec-service-order-api.version>1.0.0</ec-service-order-api.version>
+        <ec-service-order.version>1.0.0</ec-service-order.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-user-api</artifactId>
+                <version>${ec-service-user-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-user</artifactId>
+                <version>${ec-service-user.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-goods-api</artifactId>
+                <version>${ec-service-goods-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-goods</artifactId>
+                <version>${ec-service-goods.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-order-api</artifactId>
+                <version>${ec-service-order-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.xpanda</groupId>
+                <artifactId>ec-service-order</artifactId>
+                <version>${ec-service-order.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>23.3-jre</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

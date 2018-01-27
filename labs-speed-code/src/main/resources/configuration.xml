@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//Huiyao Jiang//DTD Configuration 0.1//EN" "http://127.0.0.1/dtd/configuration_0_1.dtd">
+<configuration>
+	<settings>
+		<setting name="globalPackageName" value="info.jianghuiyao.demo"></setting>
+	</settings>
+
+	<dataSource driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/edu?serverTimezone=UTC"
+		userName="root" password="root">
+	</dataSource>
+	<tables>
+		<table schema="edu" tableName="sys_function">
+			<settings>
+				<setting name="domainClassName" value="Function"></setting>
+				<setting name="domainObjectName" value="function"></setting>
+				<setting name="htmlObjectName" value="function"></setting>
+				<setting name="jsObjectName" value="function"></setting>
+			</settings>
+		</table>
+		<table schema="edu" tableName="sys_role">
+			<settings>
+				<setting name="domainClassName" value="Role"></setting>
+				<setting name="domainObjectName" value="role"></setting>
+				<setting name="htmlObjectName" value="role"></setting>
+				<setting name="jsObjectName" value="role"></setting>
+			</settings>
+		</table>
+	</tables>
+	<templates directory="D:/work/speedcode/templates/">
+		<template source="sample/web/controller/SampleController.ftl"
+			target="D:/work/speedcode/test/controller/${domainClassName}Controller.java"></template>
+		<template source="sample/web/service/SampleService.ftl"
+			target="D:/work/speedcode/test/service/${domainClassName}Service.java"></template>
+		<template source="sample/web/service/SampleServiceImpl.ftl"
+			target="D:/work/speedcode/test/service/impl/${domainClassName}ServiceImpl.java"></template>
+		<template source="sample/web/dao/SampleDao.ftl"
+			target="D:/work/speedcode/test/dao/${domainClassName}Dao.java"></template>
+		<template source="sample/web/dao/SampleMapper.ftl"
+			target="D:/work/speedcode/test/dao/${domainClassName}Mapper.xml"></template>
+		<template source="sample/web/entity/SampleEntity.ftl"
+			target="D:/work/speedcode/test/entity/${domainClassName}Entity.java"></template>
+		<template source="sample/web/html/SampleHtml.ftl"
+			target="D:/work/speedcode/test/html/${htmlObjectName}.html"></template>
+		<template source="sample/web/js/Samplejs.ftl"
+			target="D:/work/speedcode/test/js/${jsObjectName}.js"></template>
+	</templates>
+</configuration>

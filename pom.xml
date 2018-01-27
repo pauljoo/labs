@@ -15,5 +15,6 @@
         <module>labs-utils-algorithm</module>
         <module>labs-utils-structure</module>
         <module>labs-ml</module>
+        <module>labs-speed-code</module>
     </modules>
 </project>

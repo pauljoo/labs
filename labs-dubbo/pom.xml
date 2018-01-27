@@ -5,13 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>info.xpanda</groupId>
-    <artifactId>labs</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>labs-spring-boot</module>
-        <module>labs-spring-cloud</module>
-        <module>labs-dubbo</module>
-    </modules>
+    <artifactId>labs-dubbo</artifactId>
     <packaging>pom</packaging>
-
+    <version>1.0.0</version>
 </project>

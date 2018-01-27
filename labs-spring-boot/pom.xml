@@ -7,9 +7,13 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>info.xpanda</groupId>
     <artifactId>labs-spring-boot</artifactId>
+    <version>1.0.0</version>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

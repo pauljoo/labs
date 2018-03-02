@@ -1,11 +1,11 @@
-package info.xpanda.speedcode.custom;
-
-import java.util.List;
+package info.xpanda.speedcode.freemarker;
 
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModelException;
 
-public class MyBatisMethodModel implements TemplateMethodModelEx{
+import java.util.List;
+
+public class MyBatisParamMethodModel implements TemplateMethodModelEx{
 
 	public Object exec(List arguments) throws TemplateModelException {
 		if(arguments.size() != 1)  

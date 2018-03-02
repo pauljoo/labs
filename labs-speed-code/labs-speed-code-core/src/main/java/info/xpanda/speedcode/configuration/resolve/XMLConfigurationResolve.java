@@ -1,20 +1,14 @@
 package info.xpanda.speedcode.configuration.resolve;
 
-import java.io.File;
-import java.net.URL;
-
-import info.xpanda.speedcode.configuration.DataSourceConfiguration;
-import info.xpanda.speedcode.configuration.NameValuePair;
-import info.xpanda.speedcode.configuration.TableConfiguration;
-import info.xpanda.speedcode.configuration.TemplatesConfiguration;
+import info.xpanda.speedcode.configuration.*;
+import info.xpanda.speedcode.engine.ApplicationContext;
 import org.apache.commons.digester3.Digester;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import info.xpanda.speedcode.configuration.TablesConfiguration;
-import info.xpanda.speedcode.configuration.TemplateConfiguration;
-import info.xpanda.speedcode.engine.ApplicationContext;
+import java.io.File;
+import java.net.URL;
 
 public class XMLConfigurationResolve implements ConfigurationResolve{
 	

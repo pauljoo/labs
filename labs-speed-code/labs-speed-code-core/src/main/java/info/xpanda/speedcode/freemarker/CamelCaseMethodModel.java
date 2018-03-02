@@ -1,10 +1,10 @@
 package info.xpanda.speedcode.freemarker;
 
-import java.util.List;
-
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModelException;
 import info.xpanda.speedcode.utils.CamelCaseUtil;
+
+import java.util.List;
 
 public class CamelCaseMethodModel implements TemplateMethodModelEx{
 

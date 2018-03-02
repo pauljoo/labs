@@ -1,12 +1,12 @@
 package info.xpanda.speedcode.engine;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import info.xpanda.speedcode.configuration.DataSourceConfiguration;
 import info.xpanda.speedcode.configuration.NameValuePair;
 import info.xpanda.speedcode.configuration.TablesConfiguration;
 import info.xpanda.speedcode.configuration.TemplatesConfiguration;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ApplicationContext {
 	private DataSourceConfiguration dataSourceConfiguration;

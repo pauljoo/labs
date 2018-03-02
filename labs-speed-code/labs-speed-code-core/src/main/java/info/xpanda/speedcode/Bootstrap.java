@@ -1,31 +1,25 @@
 package info.xpanda.speedcode;
 
-import java.io.File;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import freemarker.template.Configuration;
+import freemarker.template.Template;
 import info.xpanda.speedcode.configuration.TableConfiguration;
+import info.xpanda.speedcode.configuration.TemplateConfiguration;
 import info.xpanda.speedcode.configuration.TemplatesConfiguration;
 import info.xpanda.speedcode.configuration.resolve.ConfigurationResolve;
 import info.xpanda.speedcode.configuration.resolve.XMLConfigurationResolve;
 import info.xpanda.speedcode.custom.CamelCaseMethodModel;
 import info.xpanda.speedcode.custom.MyBatisMethodModel;
+import info.xpanda.speedcode.engine.ApplicationContext;
 import info.xpanda.speedcode.engine.database.ColumnEntity;
 import info.xpanda.speedcode.engine.database.ConnectionHelper;
 import info.xpanda.speedcode.engine.database.TableEntity;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import info.xpanda.speedcode.configuration.TemplateConfiguration;
-import info.xpanda.speedcode.engine.ApplicationContext;
+import java.io.File;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.*;
 
 public class Bootstrap {
 	public static void main(String[] args) throws Exception {

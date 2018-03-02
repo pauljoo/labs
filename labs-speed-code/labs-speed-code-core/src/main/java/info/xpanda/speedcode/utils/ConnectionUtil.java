@@ -1,15 +1,11 @@
 package info.xpanda.speedcode.utils;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import info.xpanda.speedcode.engine.database.ColumnEntity;
 import info.xpanda.speedcode.engine.database.TableEntity;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ConnectionUtil {
 	private Connection conn;

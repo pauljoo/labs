@@ -1,19 +1,10 @@
 package info.xpanda.speedcode.engine;
 
-import java.io.File;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import info.xpanda.speedcode.configuration.DataSourceConfiguration;
-import info.xpanda.speedcode.configuration.TableConfiguration;
-import info.xpanda.speedcode.configuration.TemplatesConfiguration;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import info.xpanda.speedcode.configuration.*;
 import info.xpanda.speedcode.configuration.resolve.ConfigurationResolve;
+import info.xpanda.speedcode.configuration.resolve.XMLConfigurationResolve;
 import info.xpanda.speedcode.constants.CommonConstant;
 import info.xpanda.speedcode.engine.database.ColumnEntity;
 import info.xpanda.speedcode.engine.database.TableEntity;
@@ -21,11 +12,10 @@ import info.xpanda.speedcode.utils.ConnectionUtil;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import info.xpanda.speedcode.configuration.TablesConfiguration;
-import info.xpanda.speedcode.configuration.TemplateConfiguration;
-import info.xpanda.speedcode.configuration.resolve.XMLConfigurationResolve;
+import java.io.File;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.*;
 
 public class GeneratorImpl implements Generator{
 	private ApplicationContext applicationContext;

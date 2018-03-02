@@ -9,12 +9,29 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>info.xpanda</groupId>
     <artifactId>labs-speed-code-parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.8</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.196</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>5.0.3</version>
+            </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>

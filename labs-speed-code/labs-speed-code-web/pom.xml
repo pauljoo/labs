@@ -3,13 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>labs-speed-code</artifactId>
         <groupId>info.xpanda</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <artifactId>labs-speed-code-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../labs-speed-code-parent</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>labs-speed-code-web</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

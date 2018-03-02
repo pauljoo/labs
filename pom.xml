@@ -16,5 +16,6 @@
         <module>labs-utils-structure</module>
         <module>labs-ml</module>
         <module>labs-speed-code</module>
+        <module>labs-h2</module>
     </modules>
 </project>

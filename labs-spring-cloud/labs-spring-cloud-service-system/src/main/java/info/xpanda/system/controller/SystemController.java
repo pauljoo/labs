@@ -1,12 +1,17 @@
 package info.xpanda.system.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
+@Slf4j
 @RestController
 public class SystemController {
-    @RequestMapping("/info")
-    public String info(){
-        return "info";
+    @GetMapping("/info")
+    public String info(HttpServletRequest request){
+        log.info("I'm System Service!");
+        return "I'm System Service!";
     }
 }

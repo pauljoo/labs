@@ -13,7 +13,6 @@
         <module>labs-spring-cloud-parent</module>
         <module>labs-spring-cloud-service-system</module>
         <module>labs-spring-cloud-service-user</module>
-        <module>labs-spring-cloud-zipkin</module>
         <module>labs-spring-cloud-registry</module>
         <module>labs-spring-cloud-config</module>
         <module>labs-spring-cloud-gateway</module>

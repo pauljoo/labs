@@ -14,4 +14,17 @@ public class SystemController {
         log.info("I'm System Service!");
         return "I'm System Service!";
     }
+
+    @GetMapping("/tcc")
+    public String tcc(){
+        return "I'm System: Try TCC!";
+    }
+    @GetMapping("/confirmTcc")
+    public String confirmTcc(){
+        return "I'm System: Confirm TCC!";
+    }
+    @GetMapping("/cancelTcc")
+    public String cancelTcc(){
+        return "I'm System: Cancel TCC!";
+    }
 }

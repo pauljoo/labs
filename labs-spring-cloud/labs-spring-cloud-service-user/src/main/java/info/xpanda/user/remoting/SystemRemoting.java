@@ -7,4 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface SystemRemoting {
     @GetMapping("/info")
     String info();
+
+    @GetMapping("/tcc")
+    String tcc();
+
+    @GetMapping("/confirmTcc")
+    String confirmTcc();
+
+    @GetMapping("/cancelTcc")
+    String cancelTcc();
 }

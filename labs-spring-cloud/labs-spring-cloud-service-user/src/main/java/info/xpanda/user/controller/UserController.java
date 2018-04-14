@@ -1,8 +1,9 @@
 package info.xpanda.user.controller;
 
-import info.xpanda.user.remoting.SystemRemoting;
+import info.xpanda.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,13 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     @Autowired
-    private SystemRemoting systemRemoting;
+    private UserService userService;
 
     @RequestMapping("/info")
     @ResponseBody
     public String info(){
-        String info = systemRemoting.info();
-        log.info("System Say: " + info);
+        userService.info();
         return "I'm User Service!";
+    }
+
+    @GetMapping("/tcc")
+    @ResponseBody
+    public String tcc(){
+        userService.tcc();
+        return "I'm User: Try TCC!";
     }
 }

@@ -14,6 +14,8 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
+    <properties>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -47,6 +49,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.16.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>info.xpanda.cbb.transaction</groupId>
+                <artifactId>xpanda-transaction-spring-boot</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

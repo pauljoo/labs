@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Compensable
-    public String tcc() {
+    public String tcc(Long id, String name) {
         return systemRemoting.tcc();
     }
 

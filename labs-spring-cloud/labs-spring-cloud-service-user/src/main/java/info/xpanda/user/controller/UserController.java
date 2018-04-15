@@ -24,7 +24,7 @@ public class UserController {
     @GetMapping("/tcc")
     @ResponseBody
     public String tcc(){
-        userService.tcc();
+        userService.tcc(1L, "22");
         return "I'm User: Try TCC!";
     }
 }

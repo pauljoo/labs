@@ -10,7 +10,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>info.xpanda</groupId>
+    <groupId>info.xpanda.labs.h2</groupId>
     <artifactId>labs-h2</artifactId>
     <version>1.0.0</version>
 

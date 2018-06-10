@@ -10,7 +10,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>info.xpanda</groupId>
+    <groupId>info.xpanda.labs.spring.boot</groupId>
     <artifactId>labs-spring-boot</artifactId>
     <version>1.0.0</version>
 

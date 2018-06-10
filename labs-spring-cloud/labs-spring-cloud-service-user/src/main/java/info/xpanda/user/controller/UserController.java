@@ -1,30 +1,18 @@
 package info.xpanda.user.controller;
 
-import info.xpanda.user.service.UserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
-@Slf4j
 @RestController
 public class UserController {
     @Autowired
-    private UserService userService;
+    private RestTemplate restTemplate;
 
-    @RequestMapping("/info")
-    @ResponseBody
-    public String info(){
-        userService.info();
-        return "I'm User Service!";
-    }
-
-    @GetMapping("/tcc")
-    @ResponseBody
-    public String tcc(){
-        userService.tcc(1L, "22");
-        return "I'm User: Try TCC!";
+    @RequestMapping("/hello")
+    public String hello(){
+        restTemplate.getForObject("http://test.jianghuiyao.info:25001/info",String.class);
+        return "hello";
     }
 }

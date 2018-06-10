@@ -16,5 +16,6 @@
         <module>labs-spring-cloud-registry</module>
         <module>labs-spring-cloud-config</module>
         <module>labs-spring-cloud-gateway</module>
+        <module>labs-spring-cloud-zipkin</module>
     </modules>
 </project>

@@ -1,0 +1,24 @@
+<!ELEMENT configuration (settings?,dataSource,tables,templates)>
+<!ELEMENT settings (setting+)>
+<!ELEMENT setting (#PCDATA)>
+<!ELEMENT dataSource (#PCDATA)>
+<!ELEMENT tables (table+)>
+<!ELEMENT table (settings?)>
+<!ELEMENT templates (template+)>
+<!ELEMENT template (settings?)>
+
+
+<!ATTLIST setting name CDATA #REQUIRED>
+<!ATTLIST setting value CDATA #REQUIRED>
+
+<!ATTLIST dataSource driver CDATA #REQUIRED>
+<!ATTLIST dataSource url CDATA #REQUIRED>
+<!ATTLIST dataSource userName CDATA #REQUIRED>
+<!ATTLIST dataSource password CDATA #REQUIRED>
+
+<!ATTLIST table schema CDATA #REQUIRED>
+<!ATTLIST table tableName CDATA #REQUIRED>
+
+<!ATTLIST templates directory CDATA #REQUIRED>
+<!ATTLIST template source CDATA #REQUIRED>
+<!ATTLIST template target CDATA #REQUIRED>

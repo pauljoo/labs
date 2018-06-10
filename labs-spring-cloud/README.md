@@ -1,0 +1,9 @@
+#端口号
+|服务名|端口|
+|-|-|
+|labs-spring-cloud-registry|15000|
+|labs-spring-cloud-config|15001|
+|labs-spring-cloud-gateway|15002|
+|labs-spring-cloud-zipkin|15003|
+|labs-spring-cloud-service-user|25000|
+|labs-spring-cloud-service-system|25001|

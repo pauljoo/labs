@@ -20,5 +20,6 @@
         <module>labs-poi</module>
         <module>labs-jedis</module>
         <module>labs-redisson</module>
+        <module>labs-nio</module>
     </modules>
 </project>

@@ -21,5 +21,6 @@
         <module>labs-jedis</module>
         <module>labs-redisson</module>
         <module>labs-nio</module>
+        <module>labs-oauth2</module>
     </modules>
 </project>

@@ -22,18 +22,24 @@ public class EchoClient {
     }
 
     public void start() throws Exception{
+        //Netty线程模型，事件循环组
         EventLoopGroup group = new NioEventLoopGroup();
 
         try{
+            // 引导
             Bootstrap b = new Bootstrap();
             b.group(group)
+                    //Socket通道
                     .channel(NioSocketChannel.class)
                     .remoteAddress(new InetSocketAddress(host, port))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            // 将客户端句柄添加到通道中的管道链
                             socketChannel.pipeline().addLast(new EchoClientHandler());
                         }
                     });
+
+            //异步通知
             ChannelFuture f = b.connect().sync();
             f.channel().closeFuture().sync();
         }finally {

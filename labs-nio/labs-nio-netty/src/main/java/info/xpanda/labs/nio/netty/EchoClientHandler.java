@@ -6,6 +6,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 
+/**
+ * 入站事件句柄
+ */
 public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override

@@ -1,6 +1,5 @@
 package info.xpanda.user.service.impl;
 
-import info.xpanda.cbb.transaction.core.Compensable;
 import info.xpanda.user.remoting.SystemRemoting;
 import info.xpanda.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +19,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Compensable
     public String tcc(Long id, String name) {
         return systemRemoting.tcc();
     }

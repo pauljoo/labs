@@ -10,6 +10,7 @@
     <modules>
         <module>labs-lucene-indexer</module>
         <module>labs-lucene-searcher</module>
+        <module>labs-lucene-analyzer</module>
     </modules>
     <packaging>pom</packaging>
 </project>

@@ -1,5 +1,6 @@
 package info.xpanda.labs.lucene.analyzer.synonym;
 
+import info.xpanda.labs.lucene.analyzer.AnalyzerUtils;
 import junit.framework.TestCase;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -34,7 +35,7 @@ public class SynonymAnalyzerTest extends TestCase{
         searcher.close();
     }
 
-    public void testSearchByApi(){
-        TermQuery tq = new TermQuery(new Term("content", "hops"));
+    public void testDisplayToken(){
+        AnalyzerUtils.displayTokens(new SynonymAnalyzer(new TestSynonymEngine()), "the quick brown fox jumps over the lazy dog");
     }
 }

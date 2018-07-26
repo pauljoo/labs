@@ -7,6 +7,12 @@ import org.apache.lucene.util.Version;
 
 import java.io.Reader;
 
+/**
+ * 索引期间扩展同义词，可以通过占用磁盘空间来加快搜索速度
+ * 同时，已经被编入索引，不能再搜索期间进行改变
+ *
+ * 搜索期间扩展同义词，可以随时改变同义词
+ */
 public class SynonymAnalyzer extends Analyzer{
     private SynonymEngine engine;
 

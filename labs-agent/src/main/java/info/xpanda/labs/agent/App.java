@@ -10,6 +10,9 @@ import net.bytebuddy.utility.JavaModule;
 
 import java.lang.instrument.Instrumentation;
 
+/**
+ * java -javaagent:labs-agent.jar=mode=test Test
+ */
 public class App {
 
     public static void premain(String agentOps, Instrumentation inst) {

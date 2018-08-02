@@ -24,5 +24,6 @@
         <module>labs-oauth2</module>
         <module>labs-agent</module>
         <module>labs-lucene</module>
+        <module>labs-btrace</module>
     </modules>
 </project>

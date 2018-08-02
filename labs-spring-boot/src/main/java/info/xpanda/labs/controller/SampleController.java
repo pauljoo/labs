@@ -9,9 +9,13 @@ public class SampleController {
     @RequestMapping("/")
     @ResponseBody
     public String home() {
+        testHome("world");
         return "Hello World!";
     }
 
+    private void testHome(String prefix){
+        System.out.println("hello");
+    }
     @RequestMapping("/sample")
     @ResponseBody
     public String sample() {

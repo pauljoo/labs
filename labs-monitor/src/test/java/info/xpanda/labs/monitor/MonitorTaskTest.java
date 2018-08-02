@@ -15,7 +15,7 @@ public class MonitorTaskTest extends TestCase {
         try {
             //开始进行跑批任务
         } catch (Exception ex) {
-            monitorTask.result(false);
+            monitorTask.error(false);
         }
         monitorTask.finish();
     }

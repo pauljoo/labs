@@ -15,7 +15,19 @@ public class MonitorUrlTest extends TestCase {
         MonitorUrl monitorUrl = new MonitorUrl(tracerHolder, "/url");
         try {
         } catch (Exception ex) {
-            monitorUrl.result(false);
+            monitorUrl.error(false);
+        }
+        monitorUrl.finish();
+    }
+
+    public void testUrlWithinEvent() {
+        TracerHolder tracerHolder = new TracerHolder("test_url");
+        tracerHolder.init();
+
+        MonitorUrl monitorUrl = new MonitorUrl(tracerHolder, "/url");
+        try {
+        } catch (Exception ex) {
+            monitorUrl.error(false);
         }
         monitorUrl.finish();
     }

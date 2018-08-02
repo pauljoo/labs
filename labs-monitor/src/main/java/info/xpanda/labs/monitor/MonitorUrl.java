@@ -1,25 +1,23 @@
 package info.xpanda.labs.monitor;
 
 import info.xpanda.labs.monitor.opentracing.TracerHolder;
-import info.xpanda.labs.monitor.transaction.TracerTransaction;
-import info.xpanda.labs.monitor.transaction.TracerTransactionBuilder;
 import info.xpanda.labs.monitor.transaction.TracerTransactionTypeEnum;
+import info.xpanda.labs.monitor.transaction.TransactionHelper;
+import io.opentracing.Span;
 
 public class MonitorUrl {
-    private String urlName;
+    private Span span;
 
-    private TracerTransaction tracerTransaction;
-
-    public MonitorUrl(TracerHolder tracerHolder, String urlName) {
-        this.tracerTransaction = TracerTransactionBuilder.newTransacion(tracerHolder, TracerTransactionTypeEnum.URL.getName(), urlName);
-        this.urlName = urlName;
+    public MonitorUrl(TracerHolder tracerHolder, String taskName) {
+        span = tracerHolder.getTracer().buildSpan(taskName).start();
+        TransactionHelper.newTransaction(span, TracerTransactionTypeEnum.URL);
     }
 
     public void finish(){
-        this.tracerTransaction.finish();
+        span.finish();
     }
 
-    public void result(boolean result){
-        this.tracerTransaction.result(result);
+    public void error(boolean error){
+        TransactionHelper.logError(span, error);
     }
 }

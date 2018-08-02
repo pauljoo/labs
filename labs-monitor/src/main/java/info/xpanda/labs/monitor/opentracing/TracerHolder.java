@@ -18,14 +18,16 @@ import io.opentracing.propagation.Format;
  * 依赖监控:分析调用情况
  *
  * ===============================
+ *
+ *
  * 定时心跳：全部采样
- * {ParentId:,TraceId:,SpanId:, Type:heartbeat, Name:cpu, log(type:metric, name:gauge, value:100)}
+ * {ParentId:,TraceId:,SpanId:, Type:heartbeat, Name:cpu, log(type:heartbeat, name:cpu, metric:gauge, value:100)}
  * 普通请求
  * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action,log()}
  * 绑定在当前的跟踪中
- * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action, log(event)}
+ * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action, log(type:event, name:trade, metric:sum, value:100)}
  * 独立的单次记录：部分采样
- * {ParentId:,TraceId:,SpanId:, Type:event, Name:eventName, log(event)}
+ * {ParentId:,TraceId:,SpanId:, Type:event, Name:eventName, log(type:event, name:trade, metric:sum, value:100)}
  * 跑批：全部采样
  * {ParentId:,TraceId:,SpanId:, Type:task, Name:tastName}
  */

@@ -25,5 +25,6 @@
         <module>labs-agent</module>
         <module>labs-lucene</module>
         <module>labs-btrace</module>
+        <module>labs-monitor</module>
     </modules>
 </project>

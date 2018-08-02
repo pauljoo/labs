@@ -19,6 +19,7 @@ public class MonitorLoggingRepoter implements Reporter {
         map.put("start", span.getStart());
         map.put("duration", span.getDuration());
         map.put("tags", span.getTags());
+        map.put("logs", span.getLogs());
         log.info(JSONObject.toJSONString(map));
     }
 

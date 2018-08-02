@@ -5,12 +5,12 @@ import info.xpanda.labs.monitor.transaction.TracerTransaction;
 import info.xpanda.labs.monitor.transaction.TracerTransactionBuilder;
 import info.xpanda.labs.monitor.transaction.TracerTransactionTypeEnum;
 
-public class TracerUrl {
+public class MonitorUrl {
     private String urlName;
 
     private TracerTransaction tracerTransaction;
 
-    public TracerUrl(TracerHolder tracerHolder, String urlName) {
+    public MonitorUrl(TracerHolder tracerHolder, String urlName) {
         this.tracerTransaction = TracerTransactionBuilder.newTransacion(tracerHolder, TracerTransactionTypeEnum.URL.getName(), urlName);
         this.urlName = urlName;
     }

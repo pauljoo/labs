@@ -17,4 +17,8 @@ public class TracerTransaction {
     public void result(boolean result){
         span.setTag(TracerTags.TAG_ERROR, result);
     }
+
+    public Span getSpan() {
+        return span;
+    }
 }

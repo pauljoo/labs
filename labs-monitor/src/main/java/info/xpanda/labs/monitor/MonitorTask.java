@@ -5,12 +5,12 @@ import info.xpanda.labs.monitor.transaction.TracerTransaction;
 import info.xpanda.labs.monitor.transaction.TracerTransactionBuilder;
 import info.xpanda.labs.monitor.transaction.TracerTransactionTypeEnum;
 
-public class TracerTask {
+public class MonitorTask {
     private String taskName;
 
     private TracerTransaction tracerTransaction;
 
-    public TracerTask(TracerHolder tracerHolder, String taskName) {
+    public MonitorTask(TracerHolder tracerHolder, String taskName) {
         this.tracerTransaction = TracerTransactionBuilder.newTransacion(tracerHolder, TracerTransactionTypeEnum.TASK.getName(), taskName);
         this.taskName = taskName;
     }

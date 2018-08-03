@@ -1,11 +1,11 @@
-package info.xpanda.labs;
+package info.xpanda.h2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class H2Application {
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(H2Application.class, args);
     }
 }

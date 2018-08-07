@@ -11,10 +11,6 @@ public class TestAll {
 
     public static Test suite(){
         TestSuite suite = new TestSuite("");
-        suite.addTest(new MonitorEventTest("testEvent"));
-        suite.addTest(new MonitorHeatbeatTest("testHeatbeat"));
-        suite.addTest(new MonitorTaskTest("testTask"));
-        suite.addTest(new MonitorUrlTest("testUrl"));
         return suite;
     }
 }

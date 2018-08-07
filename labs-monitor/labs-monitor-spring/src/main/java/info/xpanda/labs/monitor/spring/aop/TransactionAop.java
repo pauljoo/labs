@@ -27,7 +27,7 @@ public class TransactionAop {
         Method method = ((MethodSignature)pjp.getSignature()).getMethod();
         Transaction transaction = method.getAnnotation(Transaction.class);
         Span activeSpan = tracerHolder.getTracer().activeSpan();
-        Span span = tracerHolder.getTracer().buildSpan(transaction.name()).asChildOf(activeSpan).start();
+        Span span = tracerHolder.getTracer().buildSpan(transaction.type().getName() + ":" + transaction.name()).asChildOf(activeSpan).start();
         TransactionHelper.logTransaction(span, transaction.type());
         Object result = pjp.proceed();
         span.finish();

@@ -14,6 +14,6 @@ public class MonitorEventTest extends TestCase {
         TracerHolder tracerHolder = new TracerHolder("test_Event");
         tracerHolder.init();
 
-        MonitorEvent.logEvent(tracerHolder, "xpanda:trade", new MonitorMetric(MetricTypeEnum.SUM, 100));
+        MonitorEvent.logEvent(tracerHolder, "xpanda:trade", new MonitorMetric(MetricTypeEnum.SUM, "100"));
     }
 }

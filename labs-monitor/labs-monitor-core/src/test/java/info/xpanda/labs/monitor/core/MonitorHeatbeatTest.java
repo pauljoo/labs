@@ -15,6 +15,6 @@ public class MonitorHeatbeatTest extends TestCase {
         TracerHolder tracerHolder = new TracerHolder("test_Heatbeat");
         tracerHolder.init();
 
-        MonitorHeartbeat.logHeartbeat(tracerHolder, "xpanda:global:cpu", new MonitorMetric(MetricTypeEnum.GAUGE, 70));
+        MonitorHeartbeat.logHeartbeat(tracerHolder, "xpanda:global:cpu", new MonitorMetric(MetricTypeEnum.GAUGE, "70"));
     }
 }

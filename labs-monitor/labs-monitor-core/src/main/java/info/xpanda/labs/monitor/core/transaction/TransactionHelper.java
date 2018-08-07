@@ -3,30 +3,24 @@ package info.xpanda.labs.monitor.core.transaction;
 import info.xpanda.labs.monitor.core.metric.MonitorMetric;
 import info.xpanda.labs.monitor.core.opentracing.TracerTags;
 import io.opentracing.Span;
+import io.opentracing.Tracer;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TransactionHelper {
-
-    public static void newTransaction(Span span, TracerTransactionTypeEnum type){
+    public static void logTransaction(Span span, TracerTransactionTypeEnum type){
         span.setTag("type", type.getName());
     }
 
-    public static void logEvent(Span span, String eventName, TracerEventTypeEnum event) {
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("type", event.getName());
-        map.put("name", eventName);
-        span.log(map);
+    public static void logEvent(Span span, TracerEventTypeEnum event) {
+        span.setTag("type", event.getName());
     }
 
-    public static void logEvent(Span span, String eventName, TracerEventTypeEnum event, MonitorMetric metric) {
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("type", event.getName());
-        map.put("name", eventName);
-        map.put("metric", metric.getName());
-        map.put("value", metric.getValue());
-        span.log(map);
+    public static void logEvent(Span span, TracerEventTypeEnum event, MonitorMetric metric) {
+        span.setTag("type", event.getName());
+        span.setTag("metric", metric.getName());
+        span.setTag("value", metric.getValue());
     }
 
     public static void logError(Span span, boolean error){

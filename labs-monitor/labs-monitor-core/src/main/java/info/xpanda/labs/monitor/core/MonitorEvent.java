@@ -9,13 +9,13 @@ import io.opentracing.Span;
 public class MonitorEvent {
     public static void logEvent(TracerHolder tracerHolder, String name) {
         Span span = tracerHolder.getTracer().buildSpan(name).start();
-        TransactionHelper.logEvent(span, name, TracerEventTypeEnum.EVENT);
+        TransactionHelper.logEvent(span, TracerEventTypeEnum.EVENT);
         span.finish();
     }
 
     public static void logEvent(TracerHolder tracerHolder, String name, MonitorMetric metric) {
         Span span = tracerHolder.getTracer().buildSpan(name).start();
-        TransactionHelper.logEvent(span, name, TracerEventTypeEnum.EVENT, metric);
+        TransactionHelper.logEvent(span, TracerEventTypeEnum.EVENT, metric);
         span.finish();
     }
 }

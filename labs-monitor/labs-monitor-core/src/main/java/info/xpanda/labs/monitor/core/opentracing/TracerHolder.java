@@ -25,7 +25,7 @@ import io.opentracing.propagation.Format;
  * 普通请求
  * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action,log()}
  * 绑定在当前的跟踪中
- * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action, log(type:event, name:trade, metric:sum, value:100)}
+ * {ParentId:,TraceId:,SpanId:, Type:url, Name:/url.action}
  * 独立的单次记录：部分采样
  * {ParentId:,TraceId:,SpanId:, Type:event, Name:eventName, log(type:event, name:trade, metric:sum, value:100)}
  * 跑批：全部采样

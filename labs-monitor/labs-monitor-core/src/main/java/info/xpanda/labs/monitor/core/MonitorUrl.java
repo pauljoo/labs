@@ -10,9 +10,16 @@ public class MonitorUrl {
 
     public MonitorUrl(TracerHolder tracerHolder, String taskName) {
         span = tracerHolder.getTracer().buildSpan(taskName).start();
-        TransactionHelper.newTransaction(span, TracerTransactionTypeEnum.URL);
+        TransactionHelper.logTransaction(span, TracerTransactionTypeEnum.URL);
     }
 
+    public void start(){
+
+    }
+
+    public void startActive(boolean finishSpanOnClose){
+
+    }
     public void finish(){
         span.finish();
     }

@@ -14,4 +14,6 @@ public @interface Event {
     String name();
 
     MetricTypeEnum metric();
+
+    String metricValue();
 }

@@ -3,9 +3,9 @@ package info.xpanda.labs.monitor.core.metric;
 public class MonitorMetric {
     private String name;
 
-    private Object value;
+    private String value;
 
-    public MonitorMetric(MetricTypeEnum type, Object value) {
+    public MonitorMetric(MetricTypeEnum type, String value) {
         this.name = type.getName();
         this.value = value;
     }
@@ -18,11 +18,11 @@ public class MonitorMetric {
         this.name = name;
     }
 
-    public Object getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
+    public void setValue(String value) {
         this.value = value;
     }
 }

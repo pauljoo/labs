@@ -1,6 +1,7 @@
 package info.xpanda.labs.monitor.core.metric;
 
 public enum MetricTypeEnum {
+    NULL(0, "NULL"),
     /**
      * 当前测量值
      */

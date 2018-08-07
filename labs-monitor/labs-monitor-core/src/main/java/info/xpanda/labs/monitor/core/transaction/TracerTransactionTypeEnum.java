@@ -2,21 +2,13 @@ package info.xpanda.labs.monitor.core.transaction;
 
 public enum TracerTransactionTypeEnum {
     /**
-     * 心跳
-     */
-    HEARTBEAT(100, "heartbeat"),
-    /**
      * 请求
      */
     URL(200, "url"),
     /**
-     * 事件
-     */
-    EVENT(201, "event"),
-    /**
      * 定时任务
      */
-    TASK(202, "task");
+    TASK(201, "task");
 
     private int id;
 

@@ -10,7 +10,7 @@ public class MonitorTask {
 
     public MonitorTask(TracerHolder tracerHolder, String taskName) {
         span = tracerHolder.getTracer().buildSpan(taskName).start();
-        TransactionHelper.newTransaction(span, TracerTransactionTypeEnum.TASK);
+        TransactionHelper.logTransaction(span, TracerTransactionTypeEnum.TASK);
     }
 
     public void finish(){

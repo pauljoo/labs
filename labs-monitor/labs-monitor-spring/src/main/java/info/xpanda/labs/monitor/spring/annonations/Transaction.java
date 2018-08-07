@@ -1,5 +1,6 @@
 package info.xpanda.labs.monitor.spring.annonations;
 
+import info.xpanda.labs.monitor.core.metric.MetricTypeEnum;
 import info.xpanda.labs.monitor.core.transaction.TracerTransactionTypeEnum;
 
 import java.lang.annotation.*;
@@ -12,5 +13,7 @@ public @interface Transaction {
 
     String name();
 
-    Propagation propagation() default Propagation.REQUIRED;
+    MetricTypeEnum metric() default MetricTypeEnum.NULL;
+
+    String metricValue() default "";
 }

@@ -26,5 +26,8 @@
         <module>labs-lucene</module>
         <module>labs-btrace</module>
         <module>labs-monitor</module>
+        <module>labs-felix</module>
+        <module>labs-license</module>
+        <module>labs-main</module>
     </modules>
 </project>

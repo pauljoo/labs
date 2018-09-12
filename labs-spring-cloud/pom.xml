@@ -19,7 +19,8 @@
         <module>labs-spring-cloud-zipkin</module>
         <module>labs-spring-cloud-auth-server</module>
         <module>labs-spring-cloud-auth-client</module>
-        <module>labs-spring-cloud-monitor</module>
+        <module>labs-spring-cloud-jpa</module>
         <module>labs-spring-cloud-zuul</module>
+        <module>labs-spring-cloud-jpa</module>
     </modules>
 </project>
